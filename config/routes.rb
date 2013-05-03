@@ -1,12 +1,15 @@
 CloutMvp::Application.routes.draw do
-  get "users/new"
-
+  resources :artists
+  resources :listeners
   root to: 'static_pages#home'
+  match "/auth/facebook/callback" => "sessions#create"
+  match "/signout" => "sessions#destroy", :as => :signout
 
   match '/help',    to: 'static_pages#help'
   match '/about',   to: 'static_pages#about'
   match '/contact', to: 'static_pages#contact' 
-  match '/signup',  to: 'users#new'
+  match '/signup',  to: 'listeners#new'
+  match '/artistsignup',  to: 'artists#new'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
