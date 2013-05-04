@@ -11,7 +11,7 @@ class ArtistsController < ApplicationController
   	@artist = Artist.new(params[:artist])
   	if @artist.save
   		flash[:sucess] = "Welcome to Clout MVP!"
-  		redirect_to @artist
+  		redirect_to artist
   	else
   		render 'new'
   	end
