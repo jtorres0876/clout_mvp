@@ -1,20 +1,28 @@
 CloutMvp::Application.routes.draw do
+
   resources :artists
   resources :listeners
-  resources :artist_sessions, only: [:new, :create, :destroy]
+  resources :tracks
+  resources :shares,    only: [:new, :create, :index]
+  resources :sessions,  only: [:new, :create, :destroy]
+  
 
   root to: 'static_pages#home'
 
-  match "/auth/facebook/callback" => "sessions#create"
-  match "/signout" => "sessions#destroy", :as => :signout
+  match 'auth/facebook/callback', to: 'sessions#create'
+  match 'auth/failure', to: redirect('/')
+  match 'signout', to: 'sessions#destroy'
 
-  match '/help',          to: 'static_pages#help'
-  match '/about',         to: 'static_pages#about'
-  match '/contact',       to: 'static_pages#contact' 
-  match '/signup',        to: 'listeners#new'
-  match '/artistsignup',  to: 'artists#new'
-  match '/artistsignin',  to: 'artist_sessions#new'
-  match '/artistsignout', to: 'artist_sessions#destroy', via: :delete    
+  match 'help',          to: 'static_pages#help'
+  match 'about',         to: 'static_pages#about'
+  match 'contact',       to: 'static_pages#contact' 
+  match 'signup',        to: 'listeners#new'
+  match 'artist_portal', to: 'static_pages#artist_portal'
+  match 'tuneclout',     to: 'static_pages#tuneclout'
+  #match "tracks/upload", :as => "upload"
+  #match 'artistsignup',  to: 'artists#new'
+  #match '/artistsignin',  to: 'artist_sessions#new'
+  #match '/artistsignout', to: 'artist_sessions#destroy', via: :delete    
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

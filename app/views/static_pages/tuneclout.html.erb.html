@@ -1,0 +1,366 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="utf-8">
+<meta name="viewport" content="height=device-height,width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+
+		<title>TuneClout Discovery Page</title>
+        
+        
+		<!-- CSS -->
+        <link rel="stylesheet"  href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css">
+         
+        <link rel="stylesheet" href="../css/tuneclout-discovery.css" type="text/css" />
+        
+        <!-- END CSS -->
+        
+        <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+        
+        
+		<!-- JAVASCRIPT SRC -->
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+        <!-- END JAVASCRIPT SRC -->
+        
+<script>
+$(document).ready(function(){
+
+
+$("#save").popup({
+    popupbeforeposition: function() {
+        var w = $( window ).width();
+
+        $( "#save" ).css( "width", w );
+    }
+});
+
+$("#buy").popup({
+    popupbeforeposition: function() {
+        var w = $( window ).width();
+        $( "#buy" ).css( "width", w );
+    }
+});
+
+
+});
+</script>
+        
+        
+	</head>
+<body>
+
+
+		<div data-role="page" class="ui-responsive-panel">
+            
+            <!-- header -->
+			<div data-role="header" data-theme="f" data-position="fixed" class="tc-header">
+            	<!-- Track and Artist Name -->
+				<div class="tc-discover-title">Discover</div>
+				<div class="tc-header-song-title">Closer by Eddie Gomez</div>
+            	<!-- Header Menu Icons -->
+				<a href="#" data-iconpos="notext" class="ui-btn-left tc-nav-home">Home</a>
+                <a href="#nav-panel" data-iconpos="notext" class="ui-btn-right tc-nav-menu" >Menu</a>
+			</div>
+            <!-- /header -->
+            
+			<div data-role="content">
+            
+					<!-- Body Content and Footer Player -->
+                    <article class="tc-discover-body">
+  <!-- New Section -->
+  <header>Live Events</header>
+  <ul>
+    <li>
+      <a href="#">
+      	<div class="tc-product-thumb">
+        <img class="" src="../css/images/product-thumb.jpg" alt=" " title="" />
+        </div>
+        <div class="tc-event-list">
+          <div class="tc-event-row">
+            <div class="tc-city">San Francisco</div>
+            <div class="tc-date">10.1.13</div>
+            <div class="clearall"></div>	
+          </div>
+          <div class="tc-event-row">
+            <div class="tc-city">Los Angeles</div>
+            <div class="tc-date">10.1.13</div>
+            <div class="clearall"></div>	
+          </div>
+          <div class="tc-event-row">
+            <div class="tc-city">NYC</div>
+            <div class="tc-date">10.1.13</div>
+            <div class="clearall"></div>	
+          </div>
+          <div class="clearall"></div>	
+        </div>
+      </a>
+    </li>
+   
+  </ul>
+
+<!-- New Section -->
+  <header>Merchandise</header>
+  <ul>
+    <li>
+      <a href="#">
+      	<div class="tc-product-thumb">
+        <img class="" src="../css/images/product-thumb.jpg" alt=" " title="" />
+        </div>
+        <div class="tc-event-list">
+          <div class="tc-event-row copy">
+            <p>T-Shirts, Posters, and signed photos</p>
+            <p>$10 - $25</p>
+            <div class="clearall"></div>	
+          </div>
+          <div class="clearall"></div>	
+        </div>
+      </a>
+    </li>
+  </ul>
+  <!-- New Section -->
+  <header>Updates</header>
+  <ul>
+    <li>
+      <a href="#">
+        <div class="tc-event-text">
+          <div class="tc-event-row copy">
+            <p>Watch @eddiegomez perform #Poeticjustice tonight on @Late_Show with David Letterman...Thinking about playing in Miami #christmasparty @eddiegomez </p>
+            </div>
+        </div>
+      </a>
+    </li>
+  </ul>
+  <!-- New Section -->
+  <header>24 Tracks by Eddie Gomez</header>
+  <ul>
+    <li>
+      <a href="#">
+        <div class="tc-event-text">
+          <div class="tc-event-row copy">
+            <p>Mr American</p>
+            <p>Moving On</p>
+            <p>Hurricane</p>
+            <p>Hurricane</p>
+            <p>View All</p>
+            </div>
+        </div>
+      </a>
+    </li>
+  </ul>
+  
+  <!-- New Section -->
+  <header>About Eddie Gomez</header>
+  <ul>
+    <li>
+      <a href="#">
+        <div class="tc-event-text">
+          <div class="tc-event-row copy">
+            <p>Two-time Grammy-Award Winner, Gómez emigrated with his family from Puerto Rico at a young age to New York, where he was raised.[1] He started on double bass in the New York City school system at the age of eleven and at age thirteen went to the New York City High School of Music and Art. He played in the Newport Festival Youth Band (led by Marshall Brown) from 1959</p>
+            </div>
+        </div>
+      </a>
+    </li>
+  </ul>
+  <!-- New Section -->
+  <header>Photos</header>
+  <ul>
+    <li>
+      <a href="#">
+        <div class="tc-event-photos">
+        <img src="../css/images/photos.jpg" alt=" " title="" />
+        <img src="../css/images/photos2.jpg" alt=" " title="" />
+        <img src="../css/images/photos3.jpg" alt=" " title="" />
+        </div>
+      </a>
+    </li>
+  </ul>    
+<div class="clearall"></div>	 
+</article>
+
+
+</div>
+<!-- End Content -->
+	<!--Footer-->
+
+<div data-role="footer" data-position="fixed">
+        <div id="tc-player-footer">
+          <div class="tc-track-playing-actions">
+            <ul>
+              <li class="tc-prev-track" ng-click="previousTrack()"></li>
+              <li class="tc-pause selected js-player-play"></li>
+              <li class="tc-next-track" ng-click="nextTrack()"></li>
+            </ul>
+            <div class="clearall"></div>	
+          </div>
+           <div class="tc-track-actions">
+    <ul class="tc-actions-nav-bar">
+      <li class="tc-save active" ng-click="signInPopupShow()" id="tc-anim-like">Like<div class="tc-anim-like"><img src="../css/images/like.png" /></div></li>
+      <li class="tc-share" ng-click="signInPopupShow()" id="tc-anim-dislike">Dislike<div class="tc-anim-dislike"><img src="../css/images/dislike.png" /></div></li>
+      <li class="tc-dislike" ng-click="signInPopupShow()">
+      	<a href="#save" data-rel="popup" data-transition="slideup" data-position-to="origin" >Save</a>
+      </li>
+      <li class="tc-buy" ng-click="signInPopupShow()">
+      	<a href="#buy" data-rel="popup" data-transition="slideup" data-position-to="origin" >Buy</a>
+      </li>
+    </ul>
+    <div class="clearall"></div>
+    </div>
+
+<div class="clearall"></div>
+            <!-- Time Counter -->
+            <div class="tc-player-row">
+            <div class="tc-time-bar"><div class="tc-time-played"></div></div>
+            <div class="tc-displaytime"><span>5:04</span></div>
+            </div>
+        </div>
+</div>
+<!--END FOOTER -->
+
+
+		
+        <!-- Begin Side Menu -->
+			<style>
+				.nav-search .ui-btn-up-a {
+					background-image:none;
+					background-color:#333333;
+				}
+				.nav-search .ui-btn-inner {
+					border-top: 1px solid #888;
+					border-color: rgba(255, 255, 255, .1);
+				}
+            </style>
+           
+
+				<div data-role="panel" data-position="right" data-position-fixed="false" data-display="reveal" id="nav-panel" data-theme="a" >
+						<div data-role="fieldcontain">
+                        	<form class="ui-bar-c" role="search" data-icon="search" data-iconpos="notext"><input placeholder="Search..." data-type="search" class="ui-input-text ui-body-c"></form>
+                    	</div>
+                        <div data-role="collapsible-set" data-theme="c">
+                            <div data-role="collapsible" data-iconpos="right">
+                                <h3 class="tc-main-menu-title">GENRE</h3>
+                                <p class="tc-sub-menu-paragraph">
+                                     <ul data-role="listview" data-theme="a" data-divider-theme="a" style="margin-top:-16px;">
+                                        <li data-filtertext="wai-aria voiceover accessibility screen reader" class="tc-sub-menu">
+                                            <a href="../about/accessibility.html">Alternative Rock</a>
+                                        </li>
+                                        <li data-filtertext="wai-aria voiceover accessibility screen reader" class="tc-sub-menu">
+                                            <a href="../about/accessibility.html">Country</a>
+                                        </li>                                        <li data-filtertext="wai-aria voiceover accessibility screen reader" class="tc-sub-menu">
+                                            <a href="../about/accessibility.html">Dance</a>
+                                        </li>                                        <li data-filtertext="wai-aria voiceover accessibility screen reader" class="tc-sub-menu">
+                                            <a href="../about/accessibility.html">Hip Hop</a>
+                                        </li>                                        <li data-filtertext="wai-aria voiceover accessibility screen reader" class="tc-sub-menu">
+                                            <a href="../about/accessibility.html">Pop</a>
+                                        </li>                                        <li data-filtertext="wai-aria voiceover accessibility screen reader" class="tc-sub-menu">
+                                            <a href="../about/accessibility.html">Rap</a>
+                                        </li>                                        <li data-filtertext="wai-aria voiceover accessibility screen reader" class="tc-sub-menu">
+                                            <a href="../about/accessibility.html">Rock &amp; Indie</a>
+                                        </li>
+                                    </ul>
+                    			</p>
+                            </div>
+							<div data-role="collapsible" data-iconpos="right">
+                                <h3 class="tc-main-menu-title">NAVIGATION</h3>
+                                <p class="tc-sub-menu-paragraph">
+                                     <ul data-role="listview" data-theme="a" data-divider-theme="a" style="margin-top:-16px;" class="nav-search">
+                                        <li data-filtertext="wai-aria voiceover accessibility screen reader" class="tc-sub-menu">
+                                            <a href="../about/accessibility.html">Alternative Rock</a>
+                                        </li>
+                                        <li data-filtertext="wai-aria voiceover accessibility screen reader" class="tc-sub-menu">
+                                            <a href="../about/accessibility.html">Country</a>
+                                        </li>                                        <li data-filtertext="wai-aria voiceover accessibility screen reader" class="tc-sub-menu">
+                                            <a href="../about/accessibility.html">Dance</a>
+                                        </li>                                        <li data-filtertext="wai-aria voiceover accessibility screen reader" class="tc-sub-menu">
+                                            <a href="../about/accessibility.html">Hip Hop</a>
+                                        </li>                                        <li data-filtertext="wai-aria voiceover accessibility screen reader" class="tc-sub-menu">
+                                            <a href="../about/accessibility.html">Pop</a>
+                                        </li>                                        <li data-filtertext="wai-aria voiceover accessibility screen reader" class="tc-sub-menu">
+                                            <a href="../about/accessibility.html">Rap</a>
+                                        </li>                                        <li data-filtertext="wai-aria voiceover accessibility screen reader" class="tc-sub-menu">
+                                            <a href="../about/accessibility.html">Rock &amp; Indie</a>
+                                        </li>
+                                    </ul>
+                    			</p>
+                            </div>
+                            <div data-role="collapsible"  data-iconpos="right">
+                                	<h3 class="tc-main-menu-title">PLAYLIST</h3>
+									<!--  <span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span> -->
+                                <p class="tc-sub-menu-paragraph">
+                                     <ul data-role="listview" data-theme="a" data-divider-theme="a" style="margin-top:-16px;" class="nav-search">
+                                        <li data-filtertext="wai-aria voiceover accessibility screen reader" class="tc-sub-menu">
+                                            <a href="../about/accessibility.html">Alternative Rock</a>
+                                        </li>
+                                        <li data-filtertext="wai-aria voiceover accessibility screen reader" class="tc-sub-menu">
+                                            <a href="../about/accessibility.html">Country</a>
+                                        </li>                                        <li data-filtertext="wai-aria voiceover accessibility screen reader" class="tc-sub-menu">
+                                            <a href="../about/accessibility.html">Dance</a>
+                                        </li>                                        <li data-filtertext="wai-aria voiceover accessibility screen reader" class="tc-sub-menu">
+                                            <a href="../about/accessibility.html">Hip Hop</a>
+                                        </li>                                        <li data-filtertext="wai-aria voiceover accessibility screen reader" class="tc-sub-menu">
+                                            <a href="../about/accessibility.html">Pop</a>
+                                        </li>                                        <li data-filtertext="wai-aria voiceover accessibility screen reader" class="tc-sub-menu">
+                                            <a href="../about/accessibility.html">Rap</a>
+                                        </li>                                        <li data-filtertext="wai-aria voiceover accessibility screen reader" class="tc-sub-menu">
+                                            <a href="../about/accessibility.html">Rock &amp; Indie</a>
+                                        </li>
+                                    </ul>
+                    			</p>
+                            </div>
+                        </div>
+				<!-- /panel -->
+                
+                <!-- SAVE AND BUY POP-UP CONTENT -->
+                <!-- Popup for Save -->
+<div data-role="popup" id="save" data-corners="false" data-theme="none" data-shadow="false" data-tolerance="0,0">
+<a href="#" data-rel="back" data-role="button" data-theme="f" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+    <div class="tc-popuplist">
+      <div class="tc-popuplist-colone">
+        <button data-theme="f" data-icon="plus"  data-mini="true">Quick Add</button>
+        <button data-theme="f" data-icon="minus" data-mini="true">Rock</button>
+        <button data-theme="f" data-icon="plus" data-mini="true">Rap</button>
+        <button data-theme="f" data-icon="plus" data-mini="true">Car Music</button>
+      </div>
+       <div class="tc-popuplist-coltwo">
+        <button data-theme="f" data-icon="minus" data-mini="true">Pop</button>
+        <button data-theme="f" data-icon="plus" data-mini="true">Home Music</button>
+        <button data-theme="f" data-icon="minus" data-mini="true">Oldies</button>
+        <button data-theme="f" data-icon="plus" data-mini="true">Work Music</button>
+      </div>
+    <div class="clearall"></div>
+   </div>
+</div>
+<!-- End Popup for Save -->
+
+<!-- Popup for Buy -->
+<div data-role="popup" id="buy" data-corners="false" data-theme="none" data-shadow="false" data-tolerance="0,0">
+<a href="#" data-rel="back" data-role="button" data-theme="f" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+  <div class="tc-popuplist">
+        <button data-theme="f" data-icon="arrow-r" data-iconpos="right" data-mini="true">You have 3 icons in your share cart</button>
+        <button data-theme="f" data-icon="arrow-r" data-iconpos="right" data-mini="true">You have 5 icons in your buy cart</button>
+        <div class="clearall"></div>
+   </div>
+</div>   
+<!-- End Popup for Buy -->
+				
+		</div><!-- /page -->
+
+<!-- LIKE & DISLIKE JS -->
+<script>
+$("#tc-anim-like").click(function(){
+	$(".tc-anim-like").css('display', 'block');
+	$(".tc-anim-like").animate({"top": "-=100px", opacity: 0.0,}, 400);
+});
+
+
+$("#tc-anim-dislike").click(function(){
+	
+	$(".tc-anim-dislike").css('display', 'block');
+	$(".tc-anim-dislike").animate({"top": "-=100px", opacity: 0.0,}, 400);
+});
+
+</script>
+        
+</body>
+</html>

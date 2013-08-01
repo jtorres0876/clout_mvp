@@ -57,9 +57,14 @@ h2 {
   color: $grayLight;
 }
 
+h3 {
+  text-align: center;
+}
+
 p {
   font-size: 1.1em;
-  line-height: 1.7em;
+  line-height: 1.2em;
+  text-align: center;
 }
 
 
@@ -176,6 +181,13 @@ aside {
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
   width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
+numberfield {
+  border: 1px solid #bbb;
+  width: 20%;
   padding: 10px;
   margin-bottom: 15px;
   @include box_sizing;

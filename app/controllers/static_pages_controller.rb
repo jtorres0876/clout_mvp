@@ -10,4 +10,10 @@ class StaticPagesController < ApplicationController
 
   def contact
   end
+
+  def artist_portal
+  end
+
+  def tuneclout
+  end
 end

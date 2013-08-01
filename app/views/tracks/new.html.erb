@@ -1,0 +1,33 @@
+<% provide(:title, "Track Information" ) %> 
+<h1>Track Information</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <p>File: <%= @track.image_name %></p>
+
+    <%= form_for @track, :html => { :multipart => true } do |f| %>
+
+      <%= f.label :name, "Track Name" %>
+      <%= f.text_field :name, placeholder: " i.e. Goodtimes" %>
+
+      <<%= f.label :avatar, "Track Artwork" %></p>
+      <<%= f.file_field :avatar %></p>
+      
+      <%= f.label :play_limit, "Play Limit" %>
+      <%= f.number_field :play_limit, placeholder: " 3 Recommended "%> 
+      
+      <%= f.label :price, "Price" %>
+      <%= f.text_field :price, placeholder: " .99" %>
+
+       <%= f.hidden_field :key %>
+
+      <label class="checkbox">
+      <%= f.check_box :download %> Enable Downloading
+      </label>
+      <br>
+      <br>
+      <%= f.submit "Submit Track", class: "btn btn-large btn-primary" %>
+    <% end %> 
+   
+  </div>
+</div>

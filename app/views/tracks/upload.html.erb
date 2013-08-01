@@ -1,0 +1,20 @@
+<% provide(:title, 'Select Artwork') %>
+<h1>Select Track Artwork</h1>
+
+
+  
+
+<div class="row">
+  <div class="span6 offset3">
+  
+    <%= direct_upload_form_for @uploader do |f| %>
+      <p> <%= f.label :image, "Track Artwork" %></p>
+      <p><%= f.file_field :image %></p>
+      <br>
+      <p><%= f.submit "Upload"%></p>
+    <% end %>  
+  </div>
+</div>
+
+
+

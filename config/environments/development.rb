@@ -36,4 +36,14 @@ CloutMvp::Application.configure do
   config.assets.debug = true
 
   OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE  
+  Paperclip.options[:command_path] = "/opt/local/bin/"
+
+  #config.paperclip_defaults = {
+  #:storage => :s3,
+  #:s3_credentials => {
+  #  bucket: 'cloutmvpmp3', 
+  #  aws_access_key_id:      'AKIAI2HVOZSCRMXA6R6A',   
+  #  aws_secret_access_key:  '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'
+  #}
+#}
 end

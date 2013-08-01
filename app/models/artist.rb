@@ -1,32 +1,36 @@
 # == Schema Information
 #
-# Table name: users
+# Table name: listeners
 #
-#  id         :integer          not null, primary key
-#  name       :string(255)
-#  email      :string(255)
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
+#  id                  :integer          not null, primary key
+#  provider            :string(255)
+#  uid                 :string(255)
+#  name                :string(255)
+#  oauth_token         :string(255)
+#  oauth_expires_at    :datetime
+#  created_at          :datetime         not null
+#  updated_at          :datetime         not null
+#  remember_token      :string(255)
+#  avatar_file_name    :string(255)
+#  avatar_content_type :string(255)
+#  avatar_file_size    :integer
+#  avatar_updated_at   :datetime
+#  location            :string(255)
+#  image               :string(255)
+#  type                :string(255)
+#  bio                 :text
+#  website             :string(255)
+#  genre               :string(255)
+#  admin               :boolean          default(FALSE)
 #
 
-class Artist < ActiveRecord::Base
-  attr_accessible :name, :email, :password, :password_confirmation
-  has_secure_password
+class Artist < Listener
+  attr_accessible :name, :genre, :website, :bio
+  has_many :tracks, dependent: :destroy
 
-  before_save { |artist| artist.email = email.downcase }
-  before_save :create_remember_token
+  
+  validates :genre, presence: true
+  validates :website, presence: true
+  validates :bio, presence: true
 
-  validates :name, presence: true, length: { maximum: 50 }
-  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
-  validates :email, presence:   true,
-                    format:     { with: VALID_EMAIL_REGEX },
-                    uniqueness: { case_sensitive: false }
-  validates :password, presence: true, length: { minimum: 6 }
-  validates :password_confirmation, presence: true
-
-  private
-
-    def create_remember_token
-      self.remember_token = SecureRandom.urlsafe_base64
-    end
 end

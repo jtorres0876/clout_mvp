@@ -1,7 +1,7 @@
  <div class="center hero-unit">
     	<%= image_tag("tclogo2.png", size: "448x172",  alt: "Tuneclout") %>
     	<p>Welcome to the Clout MVP application.</p>
-
-    	<%= link_to "Sign up now!", new_listener_path, class: "btn btn-large btn-primary" %>
+    	<p><%= link_to "Sign in With Facebook", "auth/facebook?state=listener", class: "btn btn-large btn-primary" %></p>
+    	<p>And start listening now!</p>
 </div>
 

@@ -1,0 +1,17 @@
+<% provide(:title, 'Select Mp3') %>
+<h1>Select Mp3 File</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= direct_upload_form_for @uploader do |f| %>
+      <p> <%= hidden_field_tag 'Content-Type', 'audio/mpeg' %></p>
+      <p><%= f.file_field :mp3file %></p>
+      <br>
+      <p><%= f.submit "Upload"%></p>
+    <% end %> 
+     
+  </div>
+</div>
+
+
+

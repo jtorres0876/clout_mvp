@@ -1,0 +1,19 @@
+<% provide(:title, 'All Artists') %>
+<h1>All Artists</h1>
+
+<%= will_paginate %>
+
+<ul class="users">
+  <% @artists.each do |artist| %>
+    <li>
+      <%= image_tag(artist.image, alt: artist.name) %>
+      <%= link_to artist.name, artist %>
+      <% if current_listener.admin? && !current_listener?(artist) %>
+    | <%= link_to "delete", artist, method: :delete,
+                                  data: { confirm: "You sure?" } %>
+  <% end %>
+    </li>
+  <% end %>
+</ul>
+
+<%= will_paginate %>

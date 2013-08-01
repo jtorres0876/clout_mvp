@@ -58,5 +58,11 @@ module CloutMvp
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    #AWS::S3::Base.establish_connection!( 
+      #:access_key_id     => 'AKIAI2HVOZSCRMXA6R6A',
+      #:secret_access_key => 'oHOLaUMKeyyE204dJ1YmdyeezkQZKDqY/8Nu5BIP'
+    #)
+   #BUCKET = 'cloutmvpmp3'
   end
 end

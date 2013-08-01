@@ -1,0 +1,25 @@
+<% provide(:title, @listener.name) %>
+
+
+<div>
+	
+			<p><% fb_url = "#{@share_list[0]}/notifications?access_token=5722ed4409038a1a77e881ff59ff5520&href=#{listener_path(current_listener)}&template=You have been sent a new song!" %><p> 
+
+			<p><% "#{fb_url}"%></p>
+			<% uri = URI.encode("/#{fb_url}") %>
+			<p><% "#{uri}"%></p>
+			<% uri = URI.parse(uri) %>
+			<p><%= "#{uri}" %></p>
+			<p><%= "#{uri.host}" %></p>
+			<p><%= "#{uri.port}" %></p>
+			<p><% http = Net::HTTP.POST.new(uri.host, uri.port) %></p>
+			<p><% http.use_ssl = true %></p>
+			<p><% http.verify_mode = OpenSSL::SSL::VERIFY_NONE %></p>
+			<p><%  %></p>
+  			<p><% 	%></p>
+  			<p><%= %></p>
+
+  			
+  			
+  		
+</div>
