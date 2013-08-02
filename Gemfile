@@ -6,7 +6,7 @@ gem 'bcrypt-ruby', '3.0.1'
 gem 'omniauth-facebook'
 gem 'paperclip', "~> 3.0"
 gem 'will_paginate', '3.0.3'
-gem 'sqlite3'
+
 gem 'rmagick'
 gem 'carrierwave'
 gem 'fog'
@@ -23,7 +23,8 @@ group :development, :test do
 end
 
 group :developent do
-	gem 'annotate', '2.5.0'	
+	gem 'annotate', '2.5.0'
+	gem 'sqlite3'
 end
 
 
