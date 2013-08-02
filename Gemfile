@@ -6,7 +6,6 @@ gem 'bcrypt-ruby', '3.0.1'
 gem 'omniauth-facebook'
 gem 'paperclip', "~> 3.0"
 gem 'will_paginate', '3.0.3'
-
 gem 'rmagick'
 gem 'carrierwave'
 gem 'fog'
@@ -18,13 +17,15 @@ gem 'aws-s3', :require => 'aws/s3'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-group :development, :test do 
+
+
+group :development, :test do
+  gem 'sqlite3', '1.3.5'
   gem 'rspec-rails', '2.11.0'
 end
 
 group :developent do
 	gem 'annotate', '2.5.0'
-	gem 'sqlite3'
 end
 
 
