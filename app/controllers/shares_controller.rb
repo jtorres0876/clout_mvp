@@ -25,11 +25,6 @@ class SharesController < ApplicationController
 		fb_req = Net::HTTP::Post.new(uri.request_uri)
 		fb_response = http.request(fb_req)
 
-    	#@listener = current_listener
-    	#@share_list = params[:friend_ids]  	
-    	#@share_list.each do |friend|
-    		#send_notification(friend, current_listener.oauth_token)	
-    	#end
     	redirect_to listener_path(current_listener) 
   	end
 
